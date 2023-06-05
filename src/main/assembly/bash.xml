@@ -10,7 +10,7 @@
     <fileSets>
         <fileSet>
             <directory>${project.basedir}/src/main/resources/bash</directory>
-            <outputDirectory>batch</outputDirectory>
+            <outputDirectory>bash</outputDirectory>
             <includes>
                 <include>*.bat</include>
             </includes>
