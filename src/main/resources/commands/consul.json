@@ -1,0 +1,20 @@
+{
+  "tool": "CONSUL",
+  "shorthand": "c",
+  "commands": [
+    {
+      "command": "consul start",
+      "desc": "Start Consul",
+      "shortcut": "cs",
+      "code": "consul agent -dev -node %1 -http-port=%2",
+      "example": "cs machine 8501"
+    },
+    {
+      "command": "consul members -details",
+      "desc": "List the Consul members",
+      "shortcut": "cm",
+      "code": "consul members -details",
+      "example": "cm"
+    }
+  ]
+}

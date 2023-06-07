@@ -69,6 +69,7 @@ public class CommandsGenerator implements Runnable {
     @SneakyThrows
     private void writeBatchCommands(CliCommands cliCommands) {
 
+        log.info("Generating {} commands for {} with prefix {}", cliCommands.getCommands().size(), cliCommands.getTool(), cliCommands.getShorthand());
         String tool = cliCommands.getTool();
         String shortHand = cliCommands.getShorthand();
         File folder = new File("src/main/resources/batch2");

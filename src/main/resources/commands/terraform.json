@@ -1,0 +1,62 @@
+{
+  "tool": "TERRAFORM",
+  "shorthand": "t",
+  "commands": [
+    {
+      "command": "terraform init",
+      "desc": "Download providers",
+      "shortcut": "ti",
+      "code": "terraform init",
+      "example": "ti"
+    },
+    {
+      "command": "terraform fmt",
+      "desc": "Format the .tf files",
+      "shortcut": "tf",
+      "code": "terraform fmt",
+      "example": "tf"
+    },
+    {
+      "command": "terraform validate",
+      "desc": "Validate the .tf files",
+      "shortcut": "tv",
+      "code": "terraform validate",
+      "example": "tv"
+    },
+    {
+      "command": "terraform apply",
+      "desc": "Build the infra",
+      "shortcut": "ta",
+      "code": "terraform apply",
+      "example": "ta"
+    },
+    {
+      "command": "terraform destroy",
+      "desc": "Destroy the infra",
+      "shortcut": "td",
+      "code": "terraform destroy",
+      "example": "td"
+    },
+    {
+      "command": "terraform show",
+      "desc": "Show instance details",
+      "shortcut": "ts",
+      "code": "terraform show",
+      "example": "ts"
+    },
+    {
+      "command": "terraform state list",
+      "desc": "List instances",
+      "shortcut": "tsl",
+      "code": "terraform state list",
+      "example": "tsl"
+    },
+    {
+      "command": "terraform output",
+      "desc": "Output variables",
+      "shortcut": "to",
+      "code": "terraform output",
+      "example": "to"
+    }
+  ]
+}
