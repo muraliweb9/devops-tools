@@ -15,6 +15,27 @@
       "shortcut": "gs",
       "code": "git status",
       "example": "gs"
+    },
+    {
+      "command": "git push origin",
+      "desc": "Push to origin",
+      "shortcut": "gph",
+      "code": "git push origin %1:%1",
+      "example": "gph feature/FT1"
+    },
+    {
+      "command": "git pull",
+      "desc": "Pull origin",
+      "shortcut": "gp",
+      "code": "git pull",
+      "example": "gp"
+    },
+    {
+      "command": "git branch",
+      "desc": "List branches",
+      "shortcut": "gb",
+      "code": "git branch",
+      "example": "gb"
     }
   ]
 }

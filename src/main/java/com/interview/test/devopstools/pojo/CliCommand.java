@@ -10,4 +10,8 @@ public class CliCommand {
     private String shortcut;
     private String code;
     private String example;
+
+    public String getCodeEscaped() {
+        return code.replace("%", "%%");
+    }
 }

@@ -94,7 +94,7 @@ public class CommandsGenerator implements Runnable {
     private String cliHelp(CliCommand cli) {
         return "echo " + pad(cli.getShortcut(), 10)
                 + "-^> "
-                + pad(cli.getCode(), 20)
+                + pad(cli.getCodeEscaped(), 30)
                 + "-^> "
                 + pad(cli.getExample(), 20);
     }
@@ -105,7 +105,7 @@ public class CommandsGenerator implements Runnable {
 
     @SneakyThrows
     private void writeBatchCommand(String tool, String shortHand, CliCommand cliCommand) {
-        String command = cliCommand.getCommand();
+        String command = cliCommand.getCodeEscaped();
         String desc = cliCommand.getDesc();
         String shortcut = cliCommand.getShortcut();
         String code = cliCommand.getCode();
