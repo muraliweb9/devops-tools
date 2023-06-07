@@ -12,7 +12,7 @@
             <directory>${project.basedir}/src/main/resources/bash</directory>
             <outputDirectory>bash</outputDirectory>
             <includes>
-                <include>*.bat</include>
+                <include>*.sh</include>
             </includes>
         </fileSet>
 

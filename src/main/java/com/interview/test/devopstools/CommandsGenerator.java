@@ -23,6 +23,8 @@ public class CommandsGenerator implements Runnable {
     private static final String BATCH_STATIC_FOLDER_NAME = "batch-static";
 
     private static final String BASH_FOLDER_NAME = "bash";
+    private static final String BASH_STATIC_FOLDER_NAME = "bash-static";
+
     private static final String COMMANDS_FOLDER_NAME = "commands";
 
     public static void main(String[] args) {
@@ -65,8 +67,21 @@ public class CommandsGenerator implements Runnable {
 
     @SneakyThrows
     private void copyStaticScripts() {
+        copyStaticBatchScripts();
+        copyStaticBashScripts();
+    }
+
+    @SneakyThrows
+    private void copyStaticBatchScripts() {
         File src = new File("src/main/resources/" + BATCH_STATIC_FOLDER_NAME);
         File dest = new File("src/main/resources/" + BATCH_FOLDER_NAME);
+        FileUtils.copyDirectory(src, dest);
+    }
+
+    @SneakyThrows
+    private void copyStaticBashScripts() {
+        File src = new File("src/main/resources/" + BASH_STATIC_FOLDER_NAME);
+        File dest = new File("src/main/resources/" + BASH_FOLDER_NAME);
         FileUtils.copyDirectory(src, dest);
     }
 
