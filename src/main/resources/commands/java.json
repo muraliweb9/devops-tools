@@ -1,0 +1,27 @@
+{
+  "tool": "Java",
+  "shorthand": "j",
+  "commands": [
+    {
+      "command": "Set Java8",
+      "desc": "Set Java8",
+      "shortcut": "j8",
+      "code": "set JAVA_HOME=C:\\Apps\\jdk1.8.0_202\nset PATH=%JAVA_HOME%\\bin;%PATH%",
+      "example": "j8"
+    },
+    {
+      "command": "Set Java11",
+      "desc": "Set Java11",
+      "shortcut": "j11",
+      "code": "set JAVA_HOME=C:\\Apps\\jdk-11.0.17\nset PATH=%JAVA_HOME%\\bin;%PATH%",
+      "example": "j11"
+    },
+    {
+      "command": "Set Java17",
+      "desc": "Set Java17",
+      "shortcut": "j17",
+      "code": "set JAVA_HOME=C:\\Apps\\jdk-17.0.6\nset PATH=%JAVA_HOME%\\bin;%PATH%",
+      "example": "j17"
+    }
+  ]
+}

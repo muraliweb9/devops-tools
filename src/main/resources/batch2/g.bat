@@ -13,3 +13,6 @@ echo grepo     -^> git config --get remote.origin.url-^> grepo
 echo gm        -^> git merge %%1                 -^> gm main             
 echo gconfig   -^> git config --list             -^> gconfig             
 echo gbm       -^> git branch %%1 %%2            -^> gbm new main        
+echo gu        -^> git branch --set-upstream-to=origin/%%1 %%1-^> gu localbranch      
+echo gca       -^> git commit --amend            -^> gca                 
+echo gcr       -^> git rebase -i HEAD~%%1        -^> gcr main            

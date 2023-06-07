@@ -78,6 +78,27 @@
       "shortcut": "gbm",
       "code": "git branch %1 %2",
       "example": "gbm new main"
+    },
+    {
+      "command": "git branch --set-upstream-to",
+      "desc": "Setup a local branch to upstream branch",
+      "shortcut": "gu",
+      "code": "git branch --set-upstream-to=origin/%1 %1",
+      "example": "gu localbranch"
+    },
+    {
+      "command": "git commit --amend",
+      "desc": "Amend a Git Commit message",
+      "shortcut": "gca",
+      "code": "git commit --amend",
+      "example": "gca"
+    },
+    {
+      "command": "git rebase",
+      "desc": "Amend a Git Commit rebase",
+      "shortcut": "gcr",
+      "code": "git rebase -i HEAD~%1",
+      "example": "gcr main"
     }
   ]
 }
