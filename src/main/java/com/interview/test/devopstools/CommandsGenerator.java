@@ -16,6 +16,12 @@ import org.springframework.util.FileSystemUtils;
 
 @Slf4j
 public class CommandsGenerator implements Runnable {
+
+    private static final String BATCH_FOLDER_NAME = "batch";
+    private static final String BASH_FOLDER_NAME = "bash";
+
+    private static final String COMMANDS_FOLDER_NAME = "commands";
+
     public static void main(String[] args) {
         new CommandsGenerator().run();
     }
@@ -32,7 +38,7 @@ public class CommandsGenerator implements Runnable {
 
     private List<File> getCommandsFiles() {
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        URL url = loader.getResource("commands");
+        URL url = loader.getResource(COMMANDS_FOLDER_NAME);
         String path = url.getPath();
         File[] files = new File(path).listFiles();
         return Arrays.asList(files).stream().collect(Collectors.toList());
@@ -50,7 +56,7 @@ public class CommandsGenerator implements Runnable {
 
     private void createFolderStructure() {
 
-        List<String> folders = Arrays.asList("batch2", "bash");
+        List<String> folders = Arrays.asList(BATCH_FOLDER_NAME, BASH_FOLDER_NAME);
         folders.stream().forEach(f -> createFolderStructure(f));
     }
 
@@ -72,7 +78,7 @@ public class CommandsGenerator implements Runnable {
         log.info("Generating {} commands for {} with prefix {}", cliCommands.getCommands().size(), cliCommands.getTool(), cliCommands.getShorthand());
         String tool = cliCommands.getTool();
         String shortHand = cliCommands.getShorthand();
-        File folder = new File("src/main/resources/batch2");
+        File folder = new File("src/main/resources/" + BATCH_FOLDER_NAME);
         File batchFile = new File(folder, shortHand + ".bat");
         batchFile.createNewFile();
 
@@ -115,7 +121,7 @@ public class CommandsGenerator implements Runnable {
         log.info("Writing batch for tool {} shorthand {} shortcut {}", tool, shortHand, shortcut);
 
         if (shortcut != null) {
-            File folder = new File("src/main/resources/batch2");
+            File folder = new File("src/main/resources/" + BATCH_FOLDER_NAME);
             File batchFile = new File(folder, shortcut + ".bat");
             batchFile.createNewFile();
 

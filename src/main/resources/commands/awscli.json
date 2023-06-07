@@ -1,0 +1,62 @@
+{
+  "tool": "AWS CLI",
+  "shorthand": "awsc",
+  "commands": [
+    {
+      "command": "aws configure",
+      "desc": "Configure AWSCLI set credentials etc.",
+      "shortcut": "awscc",
+      "code": "aws configure",
+      "example": "awscc"
+    },
+    {
+      "command": "aws iam list-users",
+      "desc": "List IAM users",
+      "shortcut": "awsclu",
+      "code": "aws iam list-users",
+      "example": "awsclu"
+    },
+    {
+      "command": "aws s3 ls",
+      "desc": "List S3 buckets",
+      "shortcut": "awscs3",
+      "code": "aws s3 ls",
+      "example": "awscs3"
+    },
+    {
+      "command": "aws s3 ls contents",
+      "desc": "List S3 bucket contents",
+      "shortcut": "awscs3c",
+      "code": "aws s3 ls %1",
+      "example": "awscs3c car-app-cloud-storage"
+    },
+    {
+      "command": "s3api create-bucket",
+      "desc": "Create S3 bucket",
+      "shortcut": "awscs3r",
+      "code": "aws s3api create-bucket --bucket %1 --region %2 --create-bucket-configuration LocationConstraint=%2",
+      "example": "awscs3r car-app-cloud-storage-2 eu-west-2"
+    },
+    {
+      "command": "s3 cp",
+      "desc": "Copy S3 bucket",
+      "shortcut": "awscs3p",
+      "code": "aws s3 cp %1 %2",
+      "example": "awscs3p s3://car-app-cloud-storage/springbootadmin-0.0.1-SNAPSHOT.jar s3://car-app-cloud-storage-2/"
+    },
+    {
+      "command": "aws lambda list-functions",
+      "desc": "List lambda funstions",
+      "shortcut": "awscl",
+      "code": "aws lambda list-functions",
+      "example": "awscl"
+    },
+    {
+      "command": "aws sts get-caller-identity",
+      "desc": "Check the identity of caller",
+      "shortcut": "awsci",
+      "code": "aws sts get-caller-identity",
+      "example": "awsci"
+    }
+  ]
+}
