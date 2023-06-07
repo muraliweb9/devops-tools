@@ -1,0 +1,20 @@
+{
+  "tool": "GIT",
+  "shorthand": "g",
+  "commands": [
+    {
+      "command": "git checkout",
+      "desc": "Checkout a branch",
+      "shortcut": "gc",
+      "code": "git checkout %1",
+      "example": "gc main"
+    },
+    {
+      "command": "git status",
+      "desc": "Local status",
+      "shortcut": "gs",
+      "code": "git status",
+      "example": "gs"
+    }
+  ]
+}
