@@ -1,0 +1,27 @@
+{
+  "tool": "MAVEN",
+  "shorthand": "m",
+  "commands": [
+    {
+      "command": "maven clean install",
+      "desc": "maven clean install",
+      "shortcut": "mc",
+      "code": "mvn clean install",
+      "example": "mc"
+    },
+    {
+      "command": "maven clean install (no tests)",
+      "desc": "maven clean install (no tests)",
+      "shortcut": "mci",
+      "code": "mvn clean install -DskipTests=true",
+      "example": "mci"
+    },
+    {
+      "command": "mvn spotless:apply",
+      "desc": "Maven code clean spotless",
+      "shortcut": "msa",
+      "code": "mvn spotless:apply",
+      "example": "msa"
+    }
+  ]
+}

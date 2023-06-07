@@ -36,6 +36,48 @@
       "shortcut": "gb",
       "code": "git branch",
       "example": "gb"
+    },
+    {
+      "command": "git log",
+      "desc": "Log history",
+      "shortcut": "glo",
+      "code": "git log --oneline",
+      "example": "glo"
+    },
+    {
+      "command": "git reset",
+      "desc": "Git reset local changes",
+      "shortcut": "gr",
+      "code": "git reset --hard HEAD",
+      "example": "gr"
+    },
+    {
+      "command": "git repo",
+      "desc": "Show the remote repo",
+      "shortcut": "grepo",
+      "code": "git config --get remote.origin.url",
+      "example": "grepo"
+    },
+    {
+      "command": "git merge",
+      "desc": "Merge a branch to current branch",
+      "shortcut": "gm",
+      "code": "git merge %1",
+      "example": "gm main"
+    },
+    {
+      "command": "git config",
+      "desc": "List the git config",
+      "shortcut": "gconfig",
+      "code": "git config --list",
+      "example": "gconfig"
+    },
+    {
+      "command": "git branch (new)",
+      "desc": "Create a new branch from existing",
+      "shortcut": "gbm",
+      "code": "git branch %1 %2",
+      "example": "gbm new main"
     }
   ]
 }
