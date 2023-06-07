@@ -57,6 +57,13 @@
       "shortcut": "to",
       "code": "terraform output",
       "example": "to"
+    },
+    {
+      "command": "terraform apply -var",
+      "desc": "Build infra with placeholder vars",
+      "shortcut": null,
+      "code": "terraform apply -var \"instance_name=VarMyTerraformCluster4\"",
+      "example": "to"
     }
   ]
 }

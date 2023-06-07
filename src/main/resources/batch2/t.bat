@@ -10,3 +10,4 @@ echo td        -^> terraform destroy             -^> td
 echo ts        -^> terraform show                -^> ts                  
 echo tsl       -^> terraform state list          -^> tsl                 
 echo to        -^> terraform output              -^> to                  
+echo null      -^> terraform apply -var "instance_name=VarMyTerraformCluster4"-^> to                  

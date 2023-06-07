@@ -93,7 +93,7 @@ public class CommandsGenerator implements Runnable {
     }
 
     private String cliHelp(CliCommand cli) {
-        return "echo " + pad(cli.getShortcut(), 10)
+        return "echo " + pad(cli.shortcutEscaped(), 10)
                 + "-^> "
                 + pad(cli.getCodeEscaped(), 30)
                 + "-^> "
@@ -112,12 +112,20 @@ public class CommandsGenerator implements Runnable {
         String code = cliCommand.getCode();
         String example = cliCommand.getExample();
 
-        File folder = new File("src/main/resources/batch2");
-        File batchFile = new File(folder, shortcut + ".bat");
-        batchFile.createNewFile();
+        log.info("Writing batch for tool {} shorthand {} shortcut {}", tool, shortHand, shortcut);
 
-        PrintWriter writer = new PrintWriter(batchFile);
-        writer.println(code);
-        writer.close();
+        if (shortcut != null) {
+            File folder = new File("src/main/resources/batch2");
+            File batchFile = new File(folder, shortcut + ".bat");
+            batchFile.createNewFile();
+
+            PrintWriter writer = new PrintWriter(batchFile);
+            writer.println(code);
+            writer.close();
+            log.info("Wrote batch for tool {} shorthand {} shortcut {}", tool, shortHand, shortcut);
+        }
+        else {
+            log.info("Skipping batch for tool {} shorthand {} shortcut {}", tool, shortHand, shortcut);
+        }
     }
 }

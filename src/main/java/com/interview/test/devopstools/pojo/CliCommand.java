@@ -14,4 +14,11 @@ public class CliCommand {
     public String getCodeEscaped() {
         return code.replace("%", "%%");
     }
+
+    public String shortcutEscaped() {
+        if (getShortcut() == null) {
+            return "null";
+        }
+        return getShortcut();
+    }
 }
