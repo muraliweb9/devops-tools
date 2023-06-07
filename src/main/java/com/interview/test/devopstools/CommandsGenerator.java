@@ -49,7 +49,6 @@ public class CommandsGenerator implements Runnable {
         writer.println(getReadMe(cliCommands));
 
         writer.close();
-
     }
 
     private String getReadMe(List<CliCommands> cliCommands) {
@@ -60,20 +59,17 @@ public class CommandsGenerator implements Runnable {
         readMe.append("## Table of Contents\n");
         int count = 1;
         for (CliCommands cliCommand : cliCommands) {
-            readMe.append(count + ". [" + cliCommand.getTool() + "](#" + cliCommand.getTool().toLowerCase()+ ")\n");
+            readMe.append(count + ". [" + cliCommand.getTool() + "](#" + cliCommand.getAnchor() + ")\n");
             count++;
         }
 
-
-
         for (CliCommands cliCommand : cliCommands) {
-            readMe.append("<a name=\"" + cliCommand.getTool().toLowerCase() + "\"></a><br>" + "\n");
+            readMe.append("<a name=\"" + cliCommand.getAnchor() + "\"></a><br>" + "\n");
             readMe.append("### " + cliCommand.getTool() + "\n");
         }
 
         return readMe.toString();
     }
-
 
     private List<File> getCommandsFiles() {
         ClassLoader loader = Thread.currentThread().getContextClassLoader();

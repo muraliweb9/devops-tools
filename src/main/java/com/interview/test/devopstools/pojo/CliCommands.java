@@ -9,4 +9,8 @@ public class CliCommands {
     private String tool;
     private String shorthand;
     private List<CliCommand> commands;
+
+    public String getAnchor() {
+        return getTool().toLowerCase().replace(" ", "");
+    }
 }
