@@ -1,0 +1,76 @@
+{
+  "tool": "AWS Console",
+  "shorthand": "awsn",
+  "commands": [
+    {
+      "command": "whoami",
+      "desc": "Find current user",
+      "shortcut": null,
+      "code": "whoami",
+      "example": "whoami"
+    },
+    {
+      "command": "sudo -i",
+      "desc": "Become root user",
+      "shortcut": null,
+      "code": "sudo -i",
+      "example": "sudo -i"
+    },
+    {
+      "command": "yum list java*",
+      "desc": "List all java packages available to install",
+      "shortcut": null,
+      "code": "yum list java*",
+      "example": "yum list java*"
+    },
+    {
+      "command": "yum list java* ^| grep 17",
+      "desc": "List all java 17 packages available to install",
+      "shortcut": null,
+      "code": "yum list java* ^| grep 17",
+      "example": "yum list java* ^| grep 17"
+    },
+    {
+      "command": "sudo yum install java-17",
+      "desc": "Install Java 17",
+      "shortcut": null,
+      "code": "sudo yum install java-17-amazon-corretto.x86_64",
+      "example": "sudo yum install java-17-amazon-corretto.x86_64"
+    },
+    {
+      "command": "sudo yum remove java-17",
+      "desc": "Remove Java 17",
+      "shortcut": null,
+      "code": "sudo yum remove java-17-amazon-corretto.x86_64",
+      "example": "sudo yum remove java-17-amazon-corretto.x86_64"
+    },
+    {
+      "command": "alternatives --config java",
+      "desc": "List (so can choose) available Java versions",
+      "shortcut": null,
+      "code": "alternatives --config java",
+      "example": "alternatives --config java"
+    },
+    {
+      "command": "netstat -tulpn",
+      "desc": "Find ports occupied",
+      "shortcut": null,
+      "code": "netstat -tulpn",
+      "example": "netstat -tulpn"
+    },
+    {
+      "command": "sudo ss -lntp",
+      "desc": "Find ports occupied",
+      "shortcut": null,
+      "code": "sudo ss -lntp",
+      "example": "sudo ss -lntp"
+    },
+    {
+      "command": "curl local port",
+      "desc": "Run curl on local port",
+      "shortcut": null,
+      "code": "curl http://localhost:8080",
+      "example": "curl http://localhost:8080"
+    }
+  ]
+}

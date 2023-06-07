@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.FileSystemUtils;
 
@@ -18,8 +19,10 @@ import org.springframework.util.FileSystemUtils;
 public class CommandsGenerator implements Runnable {
 
     private static final String BATCH_FOLDER_NAME = "batch";
-    private static final String BASH_FOLDER_NAME = "bash";
 
+    private static final String BATCH_STATIC_FOLDER_NAME = "batch-static";
+
+    private static final String BASH_FOLDER_NAME = "bash";
     private static final String COMMANDS_FOLDER_NAME = "commands";
 
     public static void main(String[] args) {
@@ -32,6 +35,7 @@ public class CommandsGenerator implements Runnable {
         List<File> commandsFiles = getCommandsFiles();
         List<CliCommands> cliCommands = getCiCommands(commandsFiles);
         createFolderStructure();
+        copyStaticScripts();
         writeBatchCommands(cliCommands);
         log.info("Finished generating DevOps commands");
     }
@@ -55,10 +59,17 @@ public class CommandsGenerator implements Runnable {
     }
 
     private void createFolderStructure() {
-
         List<String> folders = Arrays.asList(BATCH_FOLDER_NAME, BASH_FOLDER_NAME);
         folders.stream().forEach(f -> createFolderStructure(f));
     }
+
+    @SneakyThrows
+    private void copyStaticScripts() {
+        File src = new File("src/main/resources/" + BATCH_STATIC_FOLDER_NAME);
+        File dest = new File("src/main/resources/" + BATCH_FOLDER_NAME);
+        FileUtils.copyDirectory(src, dest);
+    }
+
 
     private void createFolderStructure(String folderName) {
         File folder = new File("src/main/resources/" + folderName);
