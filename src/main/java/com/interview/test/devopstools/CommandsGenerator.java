@@ -62,16 +62,16 @@ public class CommandsGenerator implements Runnable {
         int count = 1;
         for (CliCommands tool : cliCommands) {
             readMe.append(count + ". [" + tool.getTool() + "](#" + tool.getAnchor() + ")\n");
-            readMe.append("<hr>");
             count++;
         }
 
         for (CliCommands tool : cliCommands) {
             readMe.append("<a name=\"" + tool.getAnchor() + "\"></a><br>" + "\n");
-            readMe.append("### " + tool.getTool() + "\n");
+            readMe.append("## " + tool.getTool() + "\n");
+            //readMe.append("<hr/>\n");
             for (CliCommand cliCommand : tool.getCommands()) {
                 readMe.append("#### ``" + cliCommand.getShortcutEscaped() + "``\n");
-                readMe.append("<b>Desc:   </b>" + "``" + cliCommand.getDesc() + "``" + "<br>\n");
+                readMe.append("<b>Desc:   </b>" + "" + cliCommand.getDesc() + "" + "<br>\n");
                 readMe.append("<b>Usage:  </b>" + "``" + cliCommand.getExample() + "``" + "<br>\n");
                 readMe.append("<b>Actual: </b>" + "``" + cliCommand.getActual() + "``" + "<br>\n");
             }
