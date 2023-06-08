@@ -1,11 +1,13 @@
 package com.interview.test.devopstools;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.interview.test.devopstools.pojo.CliCommand;
 import com.interview.test.devopstools.pojo.CliCommands;
 import java.io.File;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.SneakyThrows;
@@ -58,14 +60,17 @@ public class CommandsGenerator implements Runnable {
         readMe.append("# DevOps Scripts\n");
         readMe.append("## Table of Contents\n");
         int count = 1;
-        for (CliCommands cliCommand : cliCommands) {
-            readMe.append(count + ". [" + cliCommand.getTool() + "](#" + cliCommand.getAnchor() + ")\n");
+        for (CliCommands tool : cliCommands) {
+            readMe.append(count + ". [" + tool.getTool() + "](#" + tool.getAnchor() + ")\n");
             count++;
         }
 
-        for (CliCommands cliCommand : cliCommands) {
-            readMe.append("<a name=\"" + cliCommand.getAnchor() + "\"></a><br>" + "\n");
-            readMe.append("### " + cliCommand.getTool() + "\n");
+        for (CliCommands tool : cliCommands) {
+            readMe.append("<a name=\"" + tool.getAnchor() + "\"></a><br>" + "\n");
+            readMe.append("### " + tool.getTool() + "\n");
+            for (CliCommand cliCommand : tool.getCommands()) {
+                readMe.append("#### ``" + cliCommand.getShortcutEscaped() + "``\n");
+            }
         }
 
         return readMe.toString();
@@ -80,7 +85,10 @@ public class CommandsGenerator implements Runnable {
     }
 
     private List<CliCommands> getCiCommands(List<File> commandsFiles) {
-        return commandsFiles.stream().map(f -> loadCliCommands(f)).collect(Collectors.toList());
+        List<CliCommands> cliCommands =
+                commandsFiles.stream().map(f -> loadCliCommands(f)).collect(Collectors.toList());
+        Collections.sort(cliCommands);
+        return cliCommands;
     }
 
     @SneakyThrows

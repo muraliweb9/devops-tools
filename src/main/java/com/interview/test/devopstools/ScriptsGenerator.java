@@ -38,7 +38,6 @@ public interface ScriptsGenerator extends Runnable {
         log.info("Finished creating {} folder structure ....", getName());
     }
 
-
     private void createFolderStructure(String folderName) {
         File folder = new File("src/main/resources/" + folderName);
         boolean deleted = FileSystemUtils.deleteRecursively(folder);
@@ -90,7 +89,7 @@ public interface ScriptsGenerator extends Runnable {
     }
 
     private String cliHelp(CliCommand cli) {
-        return "echo " + pad(cli.shortcutEscaped(), 10)
+        return "echo " + pad(cli.getShortcutEscaped(), 10)
                 + "-^> "
                 + pad(cli.getCodeEscaped(), 30)
                 + "-^> "

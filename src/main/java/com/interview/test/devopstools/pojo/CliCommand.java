@@ -3,7 +3,7 @@ package com.interview.test.devopstools.pojo;
 import lombok.Data;
 
 @Data
-public class CliCommand {
+public class CliCommand implements Comparable<CliCommand> {
 
     private String command;
     private String desc;
@@ -15,10 +15,15 @@ public class CliCommand {
         return code.replace("%", "%%");
     }
 
-    public String shortcutEscaped() {
+    public String getShortcutEscaped() {
         if (getShortcut() == null) {
             return "null";
         }
         return getShortcut();
+    }
+
+    @Override
+    public int compareTo(CliCommand o) {
+        return getShortcutEscaped().compareTo(o.getShortcutEscaped());
     }
 }
