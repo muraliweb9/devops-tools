@@ -13,7 +13,7 @@
 <b>Desc:   </b>Configure AWSCLI set credentials etc.<br>
 <b>Usage:  </b>``awscc``<br>
 <b>Actual: </b>``aws configure``<br>
-### ``awsci``
+### <u>``awsci``</u>
 <b>Desc:   </b>Check the identity of caller<br>
 <b>Usage:  </b>``awsci``<br>
 <b>Actual: </b>``aws sts get-caller-identity``<br>
