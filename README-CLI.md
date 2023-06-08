@@ -43,46 +43,46 @@
 <b>Actual: </b>``aws s3api create-bucket --bucket car-app-cloud-storage-2 --region eu-west-2 --create-bucket-configuration LocationConstraint=eu-west-2``<br>
 <a name="awsconsole"></a><br>
 ## AWS Console
-### <ins>null</ins>
-<b>Desc:   </b>Find current user<br>
-<b>Usage:  </b>``whoami``<br>
-<b>Actual: </b>``whoami``<br>
-### <ins>null</ins>
-<b>Desc:   </b>Become root user<br>
-<b>Usage:  </b>``sudo -i``<br>
-<b>Actual: </b>``sudo -i``<br>
-### <ins>null</ins>
-<b>Desc:   </b>List all java packages available to install<br>
-<b>Usage:  </b>``yum list java*``<br>
-<b>Actual: </b>``yum list java*``<br>
-### <ins>null</ins>
-<b>Desc:   </b>List all java 17 packages available to install<br>
-<b>Usage:  </b>``yum list java* ^| grep 17``<br>
-<b>Actual: </b>``yum list java* ^| grep 17``<br>
-### <ins>null</ins>
-<b>Desc:   </b>Install Java 17<br>
-<b>Usage:  </b>``sudo yum install java-17-amazon-corretto.x86_64``<br>
-<b>Actual: </b>``sudo yum install java-17-amazon-corretto.x86_64``<br>
-### <ins>null</ins>
-<b>Desc:   </b>Remove Java 17<br>
-<b>Usage:  </b>``sudo yum remove java-17-amazon-corretto.x86_64``<br>
-<b>Actual: </b>``sudo yum remove java-17-amazon-corretto.x86_64``<br>
-### <ins>null</ins>
+### <ins>alternatives --config java</ins>
 <b>Desc:   </b>List (so can choose) available Java versions<br>
 <b>Usage:  </b>``alternatives --config java``<br>
 <b>Actual: </b>``alternatives --config java``<br>
-### <ins>null</ins>
-<b>Desc:   </b>Find ports occupied<br>
-<b>Usage:  </b>``netstat -tulpn``<br>
-<b>Actual: </b>``netstat -tulpn``<br>
-### <ins>null</ins>
-<b>Desc:   </b>Find ports occupied<br>
-<b>Usage:  </b>``sudo ss -lntp``<br>
-<b>Actual: </b>``sudo ss -lntp``<br>
-### <ins>null</ins>
+### <ins>curl http://localhost:8080</ins>
 <b>Desc:   </b>Run curl on local port<br>
 <b>Usage:  </b>``curl http://localhost:8080``<br>
 <b>Actual: </b>``curl http://localhost:8080``<br>
+### <ins>netstat -tulpn</ins>
+<b>Desc:   </b>Find ports occupied<br>
+<b>Usage:  </b>``netstat -tulpn``<br>
+<b>Actual: </b>``netstat -tulpn``<br>
+### <ins>sudo -i</ins>
+<b>Desc:   </b>Become root user<br>
+<b>Usage:  </b>``sudo -i``<br>
+<b>Actual: </b>``sudo -i``<br>
+### <ins>sudo ss -lntp</ins>
+<b>Desc:   </b>Find ports occupied<br>
+<b>Usage:  </b>``sudo ss -lntp``<br>
+<b>Actual: </b>``sudo ss -lntp``<br>
+### <ins>sudo yum install java-17-amazon-corretto.x86_64</ins>
+<b>Desc:   </b>Install Java 17<br>
+<b>Usage:  </b>``sudo yum install java-17-amazon-corretto.x86_64``<br>
+<b>Actual: </b>``sudo yum install java-17-amazon-corretto.x86_64``<br>
+### <ins>sudo yum remove java-17-amazon-corretto.x86_64</ins>
+<b>Desc:   </b>Remove Java 17<br>
+<b>Usage:  </b>``sudo yum remove java-17-amazon-corretto.x86_64``<br>
+<b>Actual: </b>``sudo yum remove java-17-amazon-corretto.x86_64``<br>
+### <ins>whoami</ins>
+<b>Desc:   </b>Find current user<br>
+<b>Usage:  </b>``whoami``<br>
+<b>Actual: </b>``whoami``<br>
+### <ins>yum list java*</ins>
+<b>Desc:   </b>List all java packages available to install<br>
+<b>Usage:  </b>``yum list java*``<br>
+<b>Actual: </b>``yum list java*``<br>
+### <ins>yum list java* ^| grep 17</ins>
+<b>Desc:   </b>List all java 17 packages available to install<br>
+<b>Usage:  </b>``yum list java* ^| grep 17``<br>
+<b>Actual: </b>``yum list java* ^| grep 17``<br>
 <a name="consul"></a><br>
 ## CONSUL
 ### <ins>cm</ins>
@@ -184,10 +184,6 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Actual: </b>``mvn spotless:apply``<br>
 <a name="terraform"></a><br>
 ## TERRAFORM
-### <ins>null</ins>
-<b>Desc:   </b>Build infra with placeholder vars<br>
-<b>Usage:  </b>``to``<br>
-<b>Actual: </b>``terraform apply -var "instance_name=VarMyTerraformCluster4"``<br>
 ### <ins>ta</ins>
 <b>Desc:   </b>Build the infra<br>
 <b>Usage:  </b>``ta``<br>
@@ -196,6 +192,10 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Desc:   </b>Destroy the infra<br>
 <b>Usage:  </b>``td``<br>
 <b>Actual: </b>``terraform destroy``<br>
+### <ins>terraform apply -var "instance_name=VarMyTerraformCluster4"</ins>
+<b>Desc:   </b>Build infra with placeholder vars<br>
+<b>Usage:  </b>``to``<br>
+<b>Actual: </b>``terraform apply -var "instance_name=VarMyTerraformCluster4"``<br>
 ### <ins>tf</ins>
 <b>Desc:   </b>Format the .tf files<br>
 <b>Usage:  </b>``tf``<br>

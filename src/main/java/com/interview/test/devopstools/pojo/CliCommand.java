@@ -33,7 +33,7 @@ public class CliCommand implements Comparable<CliCommand> {
 
     public String getShortcutEscaped() {
         if (getShortcut() == null) {
-            return "null";
+            return getCode();
         }
         return getShortcut();
     }
