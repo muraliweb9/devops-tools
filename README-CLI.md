@@ -1,13 +1,13 @@
 # DevOps Scripts
 ## Table of Contents
 1. [AWS CLI](#awscli)
-2. [AWS Console](#awsconsole)
-3. [CONSUL](#consul)
-4. [GIT](#git)
-5. [Java](#java)
-6. [MAVEN](#maven)
-7. [TERRAFORM](#terraform)
-<a name="awscli"></a><br>
+<hr>2. [AWS Console](#awsconsole)
+<hr>3. [CONSUL](#consul)
+<hr>4. [GIT](#git)
+<hr>5. [Java](#java)
+<hr>6. [MAVEN](#maven)
+<hr>7. [TERRAFORM](#terraform)
+<hr><a name="awscli"></a><br>
 ### AWS CLI
 #### ``awscc``
 <b>Desc:   </b>``Configure AWSCLI set credentials etc.``<br>

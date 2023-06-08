@@ -62,6 +62,7 @@ public class CommandsGenerator implements Runnable {
         int count = 1;
         for (CliCommands tool : cliCommands) {
             readMe.append(count + ". [" + tool.getTool() + "](#" + tool.getAnchor() + ")\n");
+            readMe.append("<hr>");
             count++;
         }
 
