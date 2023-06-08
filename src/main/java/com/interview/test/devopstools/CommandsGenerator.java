@@ -70,6 +70,9 @@ public class CommandsGenerator implements Runnable {
             readMe.append("### " + tool.getTool() + "\n");
             for (CliCommand cliCommand : tool.getCommands()) {
                 readMe.append("#### ``" + cliCommand.getShortcutEscaped() + "``\n");
+                readMe.append("Desc:   " + cliCommand.getDesc() + "<br>\n");
+                readMe.append("Usage:  " + cliCommand.getExample() + "<br>\n");
+                readMe.append("Actual: " + cliCommand.getActual() + "<br>\n");
             }
         }
 
