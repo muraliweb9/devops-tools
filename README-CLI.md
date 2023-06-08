@@ -10,214 +10,214 @@
 <a name="awscli"></a><br>
 ### AWS CLI
 #### ``awscc``
-Desc:   Configure AWSCLI set credentials etc.<br>
-Usage:  awscc<br>
-Actual: aws configure<br>
+<b>Desc:   </b>``Configure AWSCLI set credentials etc.``<br>
+<b>Usage:  </b>``awscc``<br>
+<b>Actual: </b>``aws configure``<br>
 #### ``awsci``
-Desc:   Check the identity of caller<br>
-Usage:  awsci<br>
-Actual: aws sts get-caller-identity<br>
+<b>Desc:   </b>``Check the identity of caller``<br>
+<b>Usage:  </b>``awsci``<br>
+<b>Actual: </b>``aws sts get-caller-identity``<br>
 #### ``awscl``
-Desc:   List lambda funstions<br>
-Usage:  awscl<br>
-Actual: aws lambda list-functions<br>
+<b>Desc:   </b>``List lambda funstions``<br>
+<b>Usage:  </b>``awscl``<br>
+<b>Actual: </b>``aws lambda list-functions``<br>
 #### ``awsclu``
-Desc:   List IAM users<br>
-Usage:  awsclu<br>
-Actual: aws iam list-users<br>
+<b>Desc:   </b>``List IAM users``<br>
+<b>Usage:  </b>``awsclu``<br>
+<b>Actual: </b>``aws iam list-users``<br>
 #### ``awscs3``
-Desc:   List S3 buckets<br>
-Usage:  awscs3<br>
-Actual: aws s3 ls<br>
+<b>Desc:   </b>``List S3 buckets``<br>
+<b>Usage:  </b>``awscs3``<br>
+<b>Actual: </b>``aws s3 ls``<br>
 #### ``awscs3c``
-Desc:   List S3 bucket contents<br>
-Usage:  awscs3c car-app-cloud-storage<br>
-Actual: aws s3 ls car-app-cloud-storage<br>
+<b>Desc:   </b>``List S3 bucket contents``<br>
+<b>Usage:  </b>``awscs3c car-app-cloud-storage``<br>
+<b>Actual: </b>``aws s3 ls car-app-cloud-storage``<br>
 #### ``awscs3p``
-Desc:   Copy S3 bucket<br>
-Usage:  awscs3p s3://car-app-cloud-storage/springbootadmin-0.0.1-SNAPSHOT.jar s3://car-app-cloud-storage-2/<br>
-Actual: aws s3 cp s3://car-app-cloud-storage/springbootadmin-0.0.1-SNAPSHOT.jar s3://car-app-cloud-storage-2/<br>
+<b>Desc:   </b>``Copy S3 bucket``<br>
+<b>Usage:  </b>``awscs3p s3://car-app-cloud-storage/springbootadmin-0.0.1-SNAPSHOT.jar s3://car-app-cloud-storage-2/``<br>
+<b>Actual: </b>``aws s3 cp s3://car-app-cloud-storage/springbootadmin-0.0.1-SNAPSHOT.jar s3://car-app-cloud-storage-2/``<br>
 #### ``awscs3r``
-Desc:   Create S3 bucket<br>
-Usage:  awscs3r car-app-cloud-storage-2 eu-west-2<br>
-Actual: aws s3api create-bucket --bucket car-app-cloud-storage-2 --region eu-west-2 --create-bucket-configuration LocationConstraint=eu-west-2<br>
+<b>Desc:   </b>``Create S3 bucket``<br>
+<b>Usage:  </b>``awscs3r car-app-cloud-storage-2 eu-west-2``<br>
+<b>Actual: </b>``aws s3api create-bucket --bucket car-app-cloud-storage-2 --region eu-west-2 --create-bucket-configuration LocationConstraint=eu-west-2``<br>
 <a name="awsconsole"></a><br>
 ### AWS Console
 #### ``null``
-Desc:   Find current user<br>
-Usage:  whoami<br>
-Actual: whoami<br>
+<b>Desc:   </b>``Find current user``<br>
+<b>Usage:  </b>``whoami``<br>
+<b>Actual: </b>``whoami``<br>
 #### ``null``
-Desc:   Become root user<br>
-Usage:  sudo -i<br>
-Actual: sudo -i<br>
+<b>Desc:   </b>``Become root user``<br>
+<b>Usage:  </b>``sudo -i``<br>
+<b>Actual: </b>``sudo -i``<br>
 #### ``null``
-Desc:   List all java packages available to install<br>
-Usage:  yum list java*<br>
-Actual: yum list java*<br>
+<b>Desc:   </b>``List all java packages available to install``<br>
+<b>Usage:  </b>``yum list java*``<br>
+<b>Actual: </b>``yum list java*``<br>
 #### ``null``
-Desc:   List all java 17 packages available to install<br>
-Usage:  yum list java* ^| grep 17<br>
-Actual: yum list java* ^| grep 17<br>
+<b>Desc:   </b>``List all java 17 packages available to install``<br>
+<b>Usage:  </b>``yum list java* ^| grep 17``<br>
+<b>Actual: </b>``yum list java* ^| grep 17``<br>
 #### ``null``
-Desc:   Install Java 17<br>
-Usage:  sudo yum install java-17-amazon-corretto.x86_64<br>
-Actual: sudo yum install java-17-amazon-corretto.x86_64<br>
+<b>Desc:   </b>``Install Java 17``<br>
+<b>Usage:  </b>``sudo yum install java-17-amazon-corretto.x86_64``<br>
+<b>Actual: </b>``sudo yum install java-17-amazon-corretto.x86_64``<br>
 #### ``null``
-Desc:   Remove Java 17<br>
-Usage:  sudo yum remove java-17-amazon-corretto.x86_64<br>
-Actual: sudo yum remove java-17-amazon-corretto.x86_64<br>
+<b>Desc:   </b>``Remove Java 17``<br>
+<b>Usage:  </b>``sudo yum remove java-17-amazon-corretto.x86_64``<br>
+<b>Actual: </b>``sudo yum remove java-17-amazon-corretto.x86_64``<br>
 #### ``null``
-Desc:   List (so can choose) available Java versions<br>
-Usage:  alternatives --config java<br>
-Actual: alternatives --config java<br>
+<b>Desc:   </b>``List (so can choose) available Java versions``<br>
+<b>Usage:  </b>``alternatives --config java``<br>
+<b>Actual: </b>``alternatives --config java``<br>
 #### ``null``
-Desc:   Find ports occupied<br>
-Usage:  netstat -tulpn<br>
-Actual: netstat -tulpn<br>
+<b>Desc:   </b>``Find ports occupied``<br>
+<b>Usage:  </b>``netstat -tulpn``<br>
+<b>Actual: </b>``netstat -tulpn``<br>
 #### ``null``
-Desc:   Find ports occupied<br>
-Usage:  sudo ss -lntp<br>
-Actual: sudo ss -lntp<br>
+<b>Desc:   </b>``Find ports occupied``<br>
+<b>Usage:  </b>``sudo ss -lntp``<br>
+<b>Actual: </b>``sudo ss -lntp``<br>
 #### ``null``
-Desc:   Run curl on local port<br>
-Usage:  curl http://localhost:8080<br>
-Actual: curl http://localhost:8080<br>
+<b>Desc:   </b>``Run curl on local port``<br>
+<b>Usage:  </b>``curl http://localhost:8080``<br>
+<b>Actual: </b>``curl http://localhost:8080``<br>
 <a name="consul"></a><br>
 ### CONSUL
 #### ``cm``
-Desc:   List the Consul members<br>
-Usage:  cm<br>
-Actual: consul members -details<br>
+<b>Desc:   </b>``List the Consul members``<br>
+<b>Usage:  </b>``cm``<br>
+<b>Actual: </b>``consul members -details``<br>
 #### ``cs``
-Desc:   Start Consul<br>
-Usage:  cs machine 8501<br>
-Actual: consul agent -dev -node machine -http-port=8501<br>
+<b>Desc:   </b>``Start Consul``<br>
+<b>Usage:  </b>``cs machine 8501``<br>
+<b>Actual: </b>``consul agent -dev -node machine -http-port=8501``<br>
 <a name="git"></a><br>
 ### GIT
 #### ``gb``
-Desc:   List branches<br>
-Usage:  gb<br>
-Actual: git branch<br>
+<b>Desc:   </b>``List branches``<br>
+<b>Usage:  </b>``gb``<br>
+<b>Actual: </b>``git branch``<br>
 #### ``gbm``
-Desc:   Create a new branch from existing<br>
-Usage:  gbm new main<br>
-Actual: git branch new main<br>
+<b>Desc:   </b>``Create a new branch from existing``<br>
+<b>Usage:  </b>``gbm new main``<br>
+<b>Actual: </b>``git branch new main``<br>
 #### ``gc``
-Desc:   Checkout a branch<br>
-Usage:  gc main<br>
-Actual: git checkout main<br>
+<b>Desc:   </b>``Checkout a branch``<br>
+<b>Usage:  </b>``gc main``<br>
+<b>Actual: </b>``git checkout main``<br>
 #### ``gca``
-Desc:   Amend a Git Commit message<br>
-Usage:  gca<br>
-Actual: git commit --amend<br>
+<b>Desc:   </b>``Amend a Git Commit message``<br>
+<b>Usage:  </b>``gca``<br>
+<b>Actual: </b>``git commit --amend``<br>
 #### ``gconfig``
-Desc:   List the git config<br>
-Usage:  gconfig<br>
-Actual: git config --list<br>
+<b>Desc:   </b>``List the git config``<br>
+<b>Usage:  </b>``gconfig``<br>
+<b>Actual: </b>``git config --list``<br>
 #### ``gcr``
-Desc:   Amend a Git Commit rebase<br>
-Usage:  gcr main<br>
-Actual: git rebase -i HEAD~main<br>
+<b>Desc:   </b>``Amend a Git Commit rebase``<br>
+<b>Usage:  </b>``gcr main``<br>
+<b>Actual: </b>``git rebase -i HEAD~main``<br>
 #### ``glo``
-Desc:   Log history<br>
-Usage:  glo<br>
-Actual: git log --oneline<br>
+<b>Desc:   </b>``Log history``<br>
+<b>Usage:  </b>``glo``<br>
+<b>Actual: </b>``git log --oneline``<br>
 #### ``gm``
-Desc:   Merge a branch to current branch<br>
-Usage:  gm main<br>
-Actual: git merge main<br>
+<b>Desc:   </b>``Merge a branch to current branch``<br>
+<b>Usage:  </b>``gm main``<br>
+<b>Actual: </b>``git merge main``<br>
 #### ``gp``
-Desc:   Pull origin<br>
-Usage:  gp<br>
-Actual: git pull<br>
+<b>Desc:   </b>``Pull origin``<br>
+<b>Usage:  </b>``gp``<br>
+<b>Actual: </b>``git pull``<br>
 #### ``gph``
-Desc:   Push to origin<br>
-Usage:  gph feature/FT1<br>
-Actual: git push origin feature/FT1:feature/FT1<br>
+<b>Desc:   </b>``Push to origin``<br>
+<b>Usage:  </b>``gph feature/FT1``<br>
+<b>Actual: </b>``git push origin feature/FT1:feature/FT1``<br>
 #### ``gr``
-Desc:   Git reset local changes<br>
-Usage:  gr<br>
-Actual: git reset --hard HEAD<br>
+<b>Desc:   </b>``Git reset local changes``<br>
+<b>Usage:  </b>``gr``<br>
+<b>Actual: </b>``git reset --hard HEAD``<br>
 #### ``grepo``
-Desc:   Show the remote repo<br>
-Usage:  grepo<br>
-Actual: git config --get remote.origin.url<br>
+<b>Desc:   </b>``Show the remote repo``<br>
+<b>Usage:  </b>``grepo``<br>
+<b>Actual: </b>``git config --get remote.origin.url``<br>
 #### ``gs``
-Desc:   Local status<br>
-Usage:  gs<br>
-Actual: git status<br>
+<b>Desc:   </b>``Local status``<br>
+<b>Usage:  </b>``gs``<br>
+<b>Actual: </b>``git status``<br>
 #### ``gu``
-Desc:   Setup a local branch to upstream branch<br>
-Usage:  gu localbranch<br>
-Actual: git branch --set-upstream-to=origin/localbranch localbranch<br>
+<b>Desc:   </b>``Setup a local branch to upstream branch``<br>
+<b>Usage:  </b>``gu localbranch``<br>
+<b>Actual: </b>``git branch --set-upstream-to=origin/localbranch localbranch``<br>
 <a name="java"></a><br>
 ### Java
 #### ``j11``
-Desc:   Set Java11<br>
-Usage:  j11<br>
-Actual: set JAVA_HOME=C:\Apps\jdk-11.0.17
-set PATH=%JAVA_HOME%\bin;%PATH%<br>
+<b>Desc:   </b>``Set Java11``<br>
+<b>Usage:  </b>``j11``<br>
+<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-11.0.17
+set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 #### ``j17``
-Desc:   Set Java17<br>
-Usage:  j17<br>
-Actual: set JAVA_HOME=C:\Apps\jdk-17.0.6
-set PATH=%JAVA_HOME%\bin;%PATH%<br>
+<b>Desc:   </b>``Set Java17``<br>
+<b>Usage:  </b>``j17``<br>
+<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-17.0.6
+set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 #### ``j8``
-Desc:   Set Java8<br>
-Usage:  j8<br>
-Actual: set JAVA_HOME=C:\Apps\jdk1.8.0_202
-set PATH=%JAVA_HOME%\bin;%PATH%<br>
+<b>Desc:   </b>``Set Java8``<br>
+<b>Usage:  </b>``j8``<br>
+<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk1.8.0_202
+set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <a name="maven"></a><br>
 ### MAVEN
 #### ``mc``
-Desc:   maven clean install<br>
-Usage:  mc<br>
-Actual: mvn clean install<br>
+<b>Desc:   </b>``maven clean install``<br>
+<b>Usage:  </b>``mc``<br>
+<b>Actual: </b>``mvn clean install``<br>
 #### ``mci``
-Desc:   maven clean install (no tests)<br>
-Usage:  mci<br>
-Actual: mvn clean install -DskipTests=true<br>
+<b>Desc:   </b>``maven clean install (no tests)``<br>
+<b>Usage:  </b>``mci``<br>
+<b>Actual: </b>``mvn clean install -DskipTests=true``<br>
 #### ``msa``
-Desc:   Maven code clean spotless<br>
-Usage:  msa<br>
-Actual: mvn spotless:apply<br>
+<b>Desc:   </b>``Maven code clean spotless``<br>
+<b>Usage:  </b>``msa``<br>
+<b>Actual: </b>``mvn spotless:apply``<br>
 <a name="terraform"></a><br>
 ### TERRAFORM
 #### ``null``
-Desc:   Build infra with placeholder vars<br>
-Usage:  to<br>
-Actual: terraform apply -var "instance_name=VarMyTerraformCluster4"<br>
+<b>Desc:   </b>``Build infra with placeholder vars``<br>
+<b>Usage:  </b>``to``<br>
+<b>Actual: </b>``terraform apply -var "instance_name=VarMyTerraformCluster4"``<br>
 #### ``ta``
-Desc:   Build the infra<br>
-Usage:  ta<br>
-Actual: terraform apply<br>
+<b>Desc:   </b>``Build the infra``<br>
+<b>Usage:  </b>``ta``<br>
+<b>Actual: </b>``terraform apply``<br>
 #### ``td``
-Desc:   Destroy the infra<br>
-Usage:  td<br>
-Actual: terraform destroy<br>
+<b>Desc:   </b>``Destroy the infra``<br>
+<b>Usage:  </b>``td``<br>
+<b>Actual: </b>``terraform destroy``<br>
 #### ``tf``
-Desc:   Format the .tf files<br>
-Usage:  tf<br>
-Actual: terraform fmt<br>
+<b>Desc:   </b>``Format the .tf files``<br>
+<b>Usage:  </b>``tf``<br>
+<b>Actual: </b>``terraform fmt``<br>
 #### ``ti``
-Desc:   Download providers<br>
-Usage:  ti<br>
-Actual: terraform init<br>
+<b>Desc:   </b>``Download providers``<br>
+<b>Usage:  </b>``ti``<br>
+<b>Actual: </b>``terraform init``<br>
 #### ``to``
-Desc:   Output variables<br>
-Usage:  to<br>
-Actual: terraform output<br>
+<b>Desc:   </b>``Output variables``<br>
+<b>Usage:  </b>``to``<br>
+<b>Actual: </b>``terraform output``<br>
 #### ``ts``
-Desc:   Show instance details<br>
-Usage:  ts<br>
-Actual: terraform show<br>
+<b>Desc:   </b>``Show instance details``<br>
+<b>Usage:  </b>``ts``<br>
+<b>Actual: </b>``terraform show``<br>
 #### ``tsl``
-Desc:   List instances<br>
-Usage:  tsl<br>
-Actual: terraform state list<br>
+<b>Desc:   </b>``List instances``<br>
+<b>Usage:  </b>``tsl``<br>
+<b>Actual: </b>``terraform state list``<br>
 #### ``tv``
-Desc:   Validate the .tf files<br>
-Usage:  tv<br>
-Actual: terraform validate<br>
+<b>Desc:   </b>``Validate the .tf files``<br>
+<b>Usage:  </b>``tv``<br>
+<b>Actual: </b>``terraform validate``<br>
 
