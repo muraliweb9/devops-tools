@@ -163,6 +163,11 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Usage:  </b>``j17``<br>
 <b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-17.0.6
 set PATH=%JAVA_HOME%\bin;%PATH%``<br>
+### <ins>j20</ins>
+<b>Desc:   </b>Set Java20<br>
+<b>Usage:  </b>``j20``<br>
+<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-20.0.1
+set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 ### <ins>j8</ins>
 <b>Desc:   </b>Set Java8<br>
 <b>Usage:  </b>``j8``<br>

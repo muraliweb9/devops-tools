@@ -22,6 +22,13 @@
       "shortcut": "j17",
       "code": "set JAVA_HOME=C:\\Apps\\jdk-17.0.6\nset PATH=%JAVA_HOME%\\bin;%PATH%",
       "example": "j17"
+    },
+    {
+      "command": "Set Java20",
+      "desc": "Set Java20",
+      "shortcut": "j20",
+      "code": "set JAVA_HOME=C:\\Apps\\jdk-20.0.1\nset PATH=%JAVA_HOME%\\bin;%PATH%",
+      "example": "j20"
     }
   ]
 }
