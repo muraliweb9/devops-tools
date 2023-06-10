@@ -10,3 +10,4 @@ echo j20       -^> set JAVA_HOME=C:\Apps\jdk-20.0.1
 set PATH=%%JAVA_HOME%%\bin;%%PATH%%-^> j20                 
 echo j8        -^> set JAVA_HOME=C:\Apps\jdk1.8.0_202
 set PATH=%%JAVA_HOME%%\bin;%%PATH%%-^> j8                  
+echo jv        -^> java -version                 -^> jv                  

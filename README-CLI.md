@@ -173,6 +173,10 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Usage:  </b>``j8``<br>
 <b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk1.8.0_202
 set PATH=%JAVA_HOME%\bin;%PATH%``<br>
+### <ins>jv</ins>
+<b>Desc:   </b>Get Java version<br>
+<b>Usage:  </b>``jv``<br>
+<b>Actual: </b>``java -version``<br>
 <a name="maven"></a><br>
 ## MAVEN
 ### <ins>mc</ins>

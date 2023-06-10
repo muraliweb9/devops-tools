@@ -29,6 +29,13 @@
       "shortcut": "j20",
       "code": "set JAVA_HOME=C:\\Apps\\jdk-20.0.1\nset PATH=%JAVA_HOME%\\bin;%PATH%",
       "example": "j20"
+    },
+    {
+      "command": "Get Java version",
+      "desc": "Get Java version",
+      "shortcut": "jv",
+      "code": "java -version",
+      "example": "jv"
     }
   ]
 }
