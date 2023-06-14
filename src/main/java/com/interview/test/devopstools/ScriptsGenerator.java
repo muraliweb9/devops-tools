@@ -89,11 +89,13 @@ public interface ScriptsGenerator extends Runnable {
     }
 
     private String cliHelp(CliCommand cli) {
-        return "echo " + pad(cli.getShortcutEscaped(), 10)
+        return "echo " + pad(cli.getShortcutEscaped(), 5)
                 + "-^> "
                 + pad(cli.getCodeEscaped(), 30)
                 + "-^> "
-                + pad(cli.getExample(), 20);
+                + pad(cli.getExample(), 40)
+                + "-^> "
+                + pad(cli.getDesc(), 50);
     }
 
     private String pad(String str, int size) {
