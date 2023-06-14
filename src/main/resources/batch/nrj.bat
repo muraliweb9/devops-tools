@@ -1,0 +1,1 @@
+nomad run %1

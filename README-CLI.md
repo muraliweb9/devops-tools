@@ -6,7 +6,8 @@
 4. [GIT](#git)
 5. [Java](#java)
 6. [MAVEN](#maven)
-7. [TERRAFORM](#terraform)
+7. [NOMAD](#nomad)
+8. [TERRAFORM](#terraform)
 <a name="awscli"></a><br>
 ## AWS CLI
 ### <ins>awscc</ins>
@@ -191,6 +192,24 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Desc:   </b>Maven code clean spotless<br>
 <b>Usage:  </b>``msa``<br>
 <b>Actual: </b>``mvn spotless:apply``<br>
+<a name="nomad"></a><br>
+## NOMAD
+### <ins>na</ins>
+<b>Desc:   </b>Set non standard Nomad address<br>
+<b>Usage:  </b>``na http://127.0.0.1:14646``<br>
+<b>Actual: </b>``set NOMAD_ADDR=http://127.0.0.1:14646``<br>
+### <ins>nrj</ins>
+<b>Desc:   </b>Run a nomad job<br>
+<b>Usage:  </b>``nrj car-app-cloud-cluster.nomad``<br>
+<b>Actual: </b>``nomad run car-app-cloud-cluster.nomad``<br>
+### <ins>ns</ins>
+<b>Desc:   </b>Start Nomad<br>
+<b>Usage:  </b>``ns nomad-config.hcl``<br>
+<b>Actual: </b>``nomad agent -dev -config=nomad-config.hcl``<br>
+### <ins>nsj</ins>
+<b>Desc:   </b>Stop a nomad job<br>
+<b>Usage:  </b>``nsj car-app-cloud-cluster.nomad``<br>
+<b>Actual: </b>``nomad stop car-app-cloud-cluster.nomad``<br>
 <a name="terraform"></a><br>
 ## TERRAFORM
 ### <ins>ta</ins>

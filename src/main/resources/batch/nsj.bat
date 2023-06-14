@@ -1,0 +1,1 @@
+nomad stop %1

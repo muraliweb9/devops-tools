@@ -1,0 +1,34 @@
+{
+  "tool": "NOMAD",
+  "shorthand": "n",
+  "commands": [
+    {
+      "command": "nomad agent",
+      "desc": "Start Nomad",
+      "shortcut": "ns",
+      "code": "nomad agent -dev -config=%1",
+      "example": "ns nomad-config.hcl"
+    },
+    {
+      "command": "set Nomad address",
+      "desc": "Set non standard Nomad address",
+      "shortcut": "na",
+      "code": "set NOMAD_ADDR=%1",
+      "example": "na http://127.0.0.1:14646"
+    },
+    {
+      "command": "nomad run",
+      "desc": "Run a nomad job",
+      "shortcut": "nrj",
+      "code": "nomad run %1",
+      "example": "nrj car-app-cloud-cluster.nomad"
+    },
+    {
+      "command": "nomad stop",
+      "desc": "Stop a nomad job",
+      "shortcut": "nsj",
+      "code": "nomad stop %1",
+      "example": "nsj car-app-cloud-cluster.nomad"
+    }
+  ]
+}
