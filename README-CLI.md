@@ -207,9 +207,9 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Usage:  </b>``ns nomad-config.hcl``<br>
 <b>Actual: </b>``nomad agent -dev -config=nomad-config.hcl``<br>
 ### <ins>nsj</ins>
-<b>Desc:   </b>Stop a nomad job<br>
-<b>Usage:  </b>``nsj car-app-cloud-cluster.nomad``<br>
-<b>Actual: </b>``nomad stop car-app-cloud-cluster.nomad``<br>
+<b>Desc:   </b>Stop a nomad job - pass job name as parameter<br>
+<b>Usage:  </b>``nsj car-workflow-cloud-app-job``<br>
+<b>Actual: </b>``nomad stop car-workflow-cloud-app-job``<br>
 <a name="terraform"></a><br>
 ## TERRAFORM
 ### <ins>ta</ins>

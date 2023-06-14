@@ -25,10 +25,10 @@
     },
     {
       "command": "nomad stop",
-      "desc": "Stop a nomad job",
+      "desc": "Stop a nomad job - pass job name as parameter",
       "shortcut": "nsj",
       "code": "nomad stop %1",
-      "example": "nsj car-app-cloud-cluster.nomad"
+      "example": "nsj car-workflow-cloud-app-job"
     }
   ]
 }
