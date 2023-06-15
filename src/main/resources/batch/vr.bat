@@ -1,0 +1,1 @@
+set VAULT_TOKEN=%s

@@ -8,6 +8,7 @@
 6. [MAVEN](#maven)
 7. [NOMAD](#nomad)
 8. [TERRAFORM](#terraform)
+9. [VAULT](#vault)
 <a name="awscli"></a><br>
 ## AWS CLI
 ### <ins>awscc</ins>
@@ -248,4 +249,50 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Desc:   </b>Validate the .tf files<br>
 <b>Usage:  </b>``tv``<br>
 <b>Actual: </b>``terraform validate``<br>
+<a name="vault"></a><br>
+## VAULT
+### <ins>va</ins>
+<b>Desc:   </b>Set the vault address<br>
+<b>Usage:  </b>``va https://127.0.0.1:8200``<br>
+<b>Actual: </b>``set VAULT_ADDR=https://127.0.0.1:8200``<br>
+### <ins>vc</ins>
+<b>Desc:   </b>Set the vault cacerts<br>
+<b>Usage:  </b>``vc my-vault-cert.pem``<br>
+<b>Actual: </b>``set VAULT_CACERT=my-vault-cert.pem``<br>
+### <ins>vf</ins>
+<b>Desc:   </b>Format and validate a Vault policy<br>
+<b>Usage:  </b>``vf admin-policy.hcl``<br>
+<b>Actual: </b>``vault policy fmt admin-policy.hcl``<br>
+### <ins>vi</ins>
+<b>Desc:   </b>Initialize the vault<br>
+<b>Usage:  </b>``vi``<br>
+<b>Actual: </b>``vault operator init``<br>
+### <ins>vpl</ins>
+<b>Desc:   </b>List the vault policy list<br>
+<b>Usage:  </b>``vpl``<br>
+<b>Actual: </b>``vault policy list``<br>
+### <ins>vpr</ins>
+<b>Desc:   </b>Read a vault policy<br>
+<b>Usage:  </b>``vpr admin-policy``<br>
+<b>Actual: </b>``vault policy read admin-policy``<br>
+### <ins>vr</ins>
+<b>Desc:   </b>Set the vault root token<br>
+<b>Usage:  </b>``vr hvs.zENkM2BW1IENXB0Mg7NK``<br>
+<b>Actual: </b>``set VAULT_TOKEN=%s``<br>
+### <ins>vs</ins>
+<b>Desc:   </b>Start Vault<br>
+<b>Usage:  </b>``ns vault-config.hcl``<br>
+<b>Actual: </b>``vault server -config vault-config.hcl``<br>
+### <ins>vs</ins>
+<b>Desc:   </b>Display the vault status<br>
+<b>Usage:  </b>``vs``<br>
+<b>Actual: </b>``vault status``<br>
+### <ins>vu</ins>
+<b>Desc:   </b>Unseal the Vault<br>
+<b>Usage:  </b>``vu hvs.zENkM2BW1IENXB0Mg7NK``<br>
+<b>Actual: </b>``vault operator unseal hvs.zENkM2BW1IENXB0Mg7NK``<br>
+### <ins>vw</ins>
+<b>Desc:   </b>Write the policy to vault<br>
+<b>Usage:  </b>``vw admin-policy admin-policy.hcl``<br>
+<b>Actual: </b>``vault policy write admin-policy admin-policy.hcl``<br>
 

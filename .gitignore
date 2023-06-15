@@ -37,3 +37,6 @@ build/
 /src/main/resources/terraform/terraform.tfstate
 /src/main/resources/terraform/.terraform.lock.hcl
 /src/main/resources/terraform/.terraform/
+/src/main/resources/vault/my-vault-cert.pem
+/src/main/resources/vault/my-vault-key.pem
+/src/main/resources/vault/vault-data/

@@ -1,0 +1,83 @@
+{
+  "tool": "VAULT",
+  "shorthand": "v",
+  "commands": [
+    {
+      "command": "vault server",
+      "desc": "Start Vault",
+      "shortcut": "vs",
+      "code": "vault server -config %1",
+      "example": "ns vault-config.hcl"
+    },
+    {
+      "command": "vault address",
+      "desc": "Set the vault address",
+      "shortcut": "va",
+      "code": "set VAULT_ADDR=%1",
+      "example": "va https://127.0.0.1:8200"
+    },
+    {
+      "command": "vault cacerts",
+      "desc": "Set the vault cacerts",
+      "shortcut": "vc",
+      "code": "set VAULT_CACERT=%1",
+      "example": "vc my-vault-cert.pem"
+    },
+    {
+      "command": "vault init",
+      "desc": "Initialize the vault",
+      "shortcut": "vi",
+      "code": "vault operator init",
+      "example": "vi"
+    },
+    {
+      "command": "vault status",
+      "desc": "Display the vault status",
+      "shortcut": "vs",
+      "code": "vault status",
+      "example": "vs"
+    },
+    {
+      "command": "vault root token",
+      "desc": "Set the vault root token",
+      "shortcut": "vr",
+      "code": "set VAULT_TOKEN=%s",
+      "example": "vr hvs.zENkM2BW1IENXB0Mg7NK"
+    },
+    {
+      "command": "vault unseal",
+      "desc": "Unseal the Vault",
+      "shortcut": "vu",
+      "code": "vault operator unseal %1",
+      "example": "vu hvs.zENkM2BW1IENXB0Mg7NK"
+    },
+    {
+      "command": "vault policy format",
+      "desc": "Format and validate a Vault policy",
+      "shortcut": "vf",
+      "code": "vault policy fmt %1",
+      "example": "vf admin-policy.hcl"
+    },
+    {
+      "command": "vault policy write",
+      "desc": "Write the policy to vault",
+      "shortcut": "vw",
+      "code": "vault policy write %1 %2",
+      "example": "vw admin-policy admin-policy.hcl"
+    },
+    {
+      "command": "vault policy list",
+      "desc": "List the vault policy list",
+      "shortcut": "vpl",
+      "code": "vault policy list",
+      "example": "vpl"
+    },
+    {
+      "command": "vault policy read",
+      "desc": "Read a vault policy",
+      "shortcut": "vpr",
+      "code": "vault policy read %1",
+      "example": "vpr admin-policy"
+    }
+  ]
+}
