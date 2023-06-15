@@ -9,7 +9,7 @@ echo vi   -^> vault operator init           -^> vi                              
 echo vpl  -^> vault policy list             -^> vpl                                     -^> List the vault policy list                        
 echo vpr  -^> vault policy read %%1         -^> vpr admin-policy                        -^> Read a vault policy                               
 echo vr   -^> set VAULT_TOKEN=%%s           -^> vr hvs.zENkM2BW1IENXB0Mg7NK             -^> Set the vault root token                          
-echo vs   -^> vault server -config %%1      -^> ns vault-config.hcl                     -^> Start Vault                                       
+echo vs   -^> vault server -config %%1      -^> vs vault-config.hcl                     -^> Start Vault                                       
 echo vs   -^> vault status                  -^> vs                                      -^> Display the vault status                          
 echo vu   -^> vault operator unseal %%1     -^> vu hvs.zENkM2BW1IENXB0Mg7NK             -^> Unseal the Vault                                  
 echo vw   -^> vault policy write %%1 %%2    -^> vw admin-policy admin-policy.hcl        -^> Write the policy to vault                         

@@ -7,7 +7,7 @@
       "desc": "Start Vault",
       "shortcut": "vs",
       "code": "vault server -config %1",
-      "example": "ns vault-config.hcl"
+      "example": "vs vault-config.hcl"
     },
     {
       "command": "vault address",

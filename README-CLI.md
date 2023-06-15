@@ -281,7 +281,7 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Actual: </b>``set VAULT_TOKEN=%s``<br>
 ### <ins>vs</ins>
 <b>Desc:   </b>Start Vault<br>
-<b>Usage:  </b>``ns vault-config.hcl``<br>
+<b>Usage:  </b>``vs vault-config.hcl``<br>
 <b>Actual: </b>``vault server -config vault-config.hcl``<br>
 ### <ins>vs</ins>
 <b>Desc:   </b>Display the vault status<br>
