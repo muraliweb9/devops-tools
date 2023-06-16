@@ -23,9 +23,12 @@ public interface ScriptsGenerator extends Runnable {
 
     List<CliCommands> getCliCommands();
 
+    default void validate() {}
+
     @Override
     default void run() {
         log.info("Generating {} commands ....", getName());
+        validate();
         createFolderStructure();
         copyStaticScripts();
         writeDynamicScripts(getCliCommands());

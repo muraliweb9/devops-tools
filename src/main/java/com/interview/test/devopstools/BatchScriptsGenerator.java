@@ -16,6 +16,12 @@ public class BatchScriptsGenerator implements ScriptsGenerator {
     }
 
     @Override
+    public void validate() {
+        cliCommands.stream().forEach(c -> c.getShorthand());
+
+    }
+
+    @Override
     public String getName() {
         return BATCH_GEN_NAME;
     }
