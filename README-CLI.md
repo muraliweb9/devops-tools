@@ -255,18 +255,34 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Desc:   </b>Set the vault address<br>
 <b>Usage:  </b>``va https://127.0.0.1:8200``<br>
 <b>Actual: </b>``set VAULT_ADDR=https://127.0.0.1:8200``<br>
+### <ins>vault kv get secret/kv/murali</ins>
+<b>Desc:   </b>Get key value pairs from a secret<br>
+<b>Usage:  </b>``vault kv get secret/kv/murali``<br>
+<b>Actual: </b>``vault kv get secret/kv/murali``<br>
+### <ins>vault kv put secret/kv/murali First=Mura Last=Karu Country=UK Location=London</ins>
+<b>Desc:   </b>Put key value pairs in a secret<br>
+<b>Usage:  </b>``vault kv put secret/kv/murali First=Mura Last=Karu Country=UK Location=London``<br>
+<b>Actual: </b>``vault kv put secret/kv/murali First=Mura Last=Karu Country=UK Location=London``<br>
+### <ins>vault token revoke <new_token></ins>
+<b>Desc:   </b>Revoke a token<br>
+<b>Usage:  </b>``vault token revoke <new_token>``<br>
+<b>Actual: </b>``vault token revoke <new_token>``<br>
 ### <ins>vc</ins>
 <b>Desc:   </b>Set the vault cacerts<br>
 <b>Usage:  </b>``vc my-vault-cert.pem``<br>
 <b>Actual: </b>``set VAULT_CACERT=my-vault-cert.pem``<br>
-### <ins>vf</ins>
-<b>Desc:   </b>Format and validate a Vault policy<br>
-<b>Usage:  </b>``vf admin-policy.hcl``<br>
-<b>Actual: </b>``vault policy fmt admin-policy.hcl``<br>
 ### <ins>vi</ins>
 <b>Desc:   </b>Initialize the vault<br>
 <b>Usage:  </b>``vi``<br>
 <b>Actual: </b>``vault operator init``<br>
+### <ins>vpd</ins>
+<b>Desc:   </b>Delete a policy in Vault<br>
+<b>Usage:  </b>``vpd admin-policy``<br>
+<b>Actual: </b>``vault policy delete admin-policy``<br>
+### <ins>vpf</ins>
+<b>Desc:   </b>Format and validate a Vault policy<br>
+<b>Usage:  </b>``vpf admin-policy.hcl``<br>
+<b>Actual: </b>``vault policy fmt admin-policy.hcl``<br>
 ### <ins>vpl</ins>
 <b>Desc:   </b>List the vault policy list<br>
 <b>Usage:  </b>``vpl``<br>
@@ -275,6 +291,10 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Desc:   </b>Read a vault policy<br>
 <b>Usage:  </b>``vpr admin-policy``<br>
 <b>Actual: </b>``vault policy read admin-policy``<br>
+### <ins>vpw</ins>
+<b>Desc:   </b>Write the policy to vault<br>
+<b>Usage:  </b>``vpw admin-policy admin-policy.hcl``<br>
+<b>Actual: </b>``vault policy write admin-policy admin-policy.hcl``<br>
 ### <ins>vr</ins>
 <b>Desc:   </b>Set the vault root token<br>
 <b>Usage:  </b>``vr hvs.zENkM2BW1IENXB0Mg7NK``<br>
@@ -287,12 +307,28 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Desc:   </b>Display the vault status<br>
 <b>Usage:  </b>``vs``<br>
 <b>Actual: </b>``vault status``<br>
+### <ins>vsd</ins>
+<b>Desc:   </b>Disable a secret<br>
+<b>Usage:  </b>``vsd secret/``<br>
+<b>Actual: </b>``vault secrets disable secret/``<br>
+### <ins>vse</ins>
+<b>Desc:   </b>Create a secret in a vault<br>
+<b>Usage:  </b>``vse secret/ kv-v2``<br>
+<b>Actual: </b>``vault secrets enable -path=secret/ kv-v2``<br>
+### <ins>vsl</ins>
+<b>Desc:   </b>List the secrets in a vault<br>
+<b>Usage:  </b>``vsl``<br>
+<b>Actual: </b>``vault secrets list``<br>
+### <ins>vtc</ins>
+<b>Desc:   </b>Create a token in vault for a policy<br>
+<b>Usage:  </b>``vtc admin-policy``<br>
+<b>Actual: </b>``vault token create -policy=admin-policy``<br>
+### <ins>vtl</ins>
+<b>Desc:   </b>Login to Vault with a token<br>
+<b>Usage:  </b>``vtl RLkSejNEWPvHQ0hKBSsSSlql``<br>
+<b>Actual: </b>``vault login RLkSejNEWPvHQ0hKBSsSSlql``<br>
 ### <ins>vu</ins>
 <b>Desc:   </b>Unseal the Vault<br>
 <b>Usage:  </b>``vu hvs.zENkM2BW1IENXB0Mg7NK``<br>
 <b>Actual: </b>``vault operator unseal hvs.zENkM2BW1IENXB0Mg7NK``<br>
-### <ins>vw</ins>
-<b>Desc:   </b>Write the policy to vault<br>
-<b>Usage:  </b>``vw admin-policy admin-policy.hcl``<br>
-<b>Actual: </b>``vault policy write admin-policy admin-policy.hcl``<br>
 

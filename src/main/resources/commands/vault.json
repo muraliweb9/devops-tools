@@ -54,16 +54,16 @@
     {
       "command": "vault policy format",
       "desc": "Format and validate a Vault policy",
-      "shortcut": "vf",
+      "shortcut": "vpf",
       "code": "vault policy fmt %1",
-      "example": "vf admin-policy.hcl"
+      "example": "vpf admin-policy.hcl"
     },
     {
       "command": "vault policy write",
       "desc": "Write the policy to vault",
-      "shortcut": "vw",
+      "shortcut": "vpw",
       "code": "vault policy write %1 %2",
-      "example": "vw admin-policy admin-policy.hcl"
+      "example": "vpw admin-policy admin-policy.hcl"
     },
     {
       "command": "vault policy list",
@@ -73,11 +73,74 @@
       "example": "vpl"
     },
     {
+      "command": "vault policy delete",
+      "desc": "Delete a policy in Vault",
+      "shortcut": "vpd",
+      "code": "vault policy delete %1",
+      "example": "vpd admin-policy"
+    },
+    {
       "command": "vault policy read",
       "desc": "Read a vault policy",
       "shortcut": "vpr",
       "code": "vault policy read %1",
       "example": "vpr admin-policy"
+    },
+    {
+      "command": "vault secrets enable",
+      "desc": "Create a secret in a vault",
+      "shortcut": "vse",
+      "code": "vault secrets enable -path=%1 %2",
+      "example": "vse secret/ kv-v2"
+    },
+    {
+      "command": "vault secrets list",
+      "desc": "List the secrets in a vault",
+      "shortcut": "vsl",
+      "code": "vault secrets list",
+      "example": "vsl"
+    },
+    {
+      "command": "vault token create",
+      "desc": "Create a token in vault for a policy",
+      "shortcut": "vtc",
+      "code": "vault token create -policy=%1",
+      "example": "vtc admin-policy"
+    },
+    {
+      "command": "vault token login",
+      "desc": "Login to Vault with a token",
+      "shortcut": "vtl",
+      "code": "vault login %1",
+      "example": "vtl RLkSejNEWPvHQ0hKBSsSSlql"
+    },
+    {
+      "command": "vault put kv",
+      "desc": "Put key value pairs in a secret",
+      "shortcut": null,
+      "code": "vault kv put secret/kv/murali First=Mura Last=Karu Country=UK Location=London",
+      "example": "vault kv put secret/kv/murali First=Mura Last=Karu Country=UK Location=London"
+    },
+    {
+      "command": "vault get kv",
+      "desc": "Get key value pairs from a secret",
+      "shortcut": null,
+      "code": "vault kv get secret/kv/murali",
+      "example": "vault kv get secret/kv/murali"
+    },
+    {
+      "command": "vault token revoke",
+      "desc": "Revoke a token",
+      "shortcut": null,
+      "code": "vault token revoke <new_token>",
+      "example": "vault token revoke <new_token>"
+    },
+    {
+      "command": "vault secrets disable",
+      "desc": "Disable a secret",
+      "shortcut": "vsd",
+      "code": "vault secrets disable %1",
+      "example": "vsd secret/"
     }
   ]
 }
