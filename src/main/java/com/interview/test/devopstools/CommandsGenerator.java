@@ -101,7 +101,7 @@ public class CommandsGenerator implements Runnable {
         readMe.append("## Table of Contents\n");
         int count = 1;
         for (CliCommands tool : cliCommands) {
-            readMe.append(count + ". [" + tool.getTool() + "](#" + tool.getAnchor() + ")\n");
+            readMe.append(count + ". [" + tool.getTool() + "](#" + tool.getAnchor() + ") [" + tool.getShorthand() + "] \n");
             count++;
         }
 

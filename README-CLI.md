@@ -1,14 +1,14 @@
 # DevOps Scripts
 ## Table of Contents
-1. [AWS CLI](#awscli)
-2. [AWS Console](#awsconsole)
-3. [CONSUL](#consul)
-4. [GIT](#git)
-5. [Java](#java)
-6. [MAVEN](#maven)
-7. [NOMAD](#nomad)
-8. [TERRAFORM](#terraform)
-9. [VAULT](#vault)
+1. [AWS CLI](#awscli) [awsc] 
+2. [AWS Console](#awsconsole) [awsn] 
+3. [CONSUL](#consul) [c] 
+4. [GIT](#git) [g] 
+5. [Java](#java) [j] 
+6. [MAVEN](#maven) [m] 
+7. [NOMAD](#nomad) [n] 
+8. [TERRAFORM](#terraform) [t] 
+9. [VAULT](#vault) [v] 
 <a name="awscli"></a><br>
 ## AWS CLI
 ### <ins>awscc</ins>
