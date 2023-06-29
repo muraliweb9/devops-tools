@@ -158,23 +158,19 @@
 ### <ins>j11</ins>
 <b>Desc:   </b>Set Java11<br>
 <b>Usage:  </b>``j11``<br>
-<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-11.0.17
-set PATH=%JAVA_HOME%\bin;%PATH%``<br>
+<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-11.0.17 set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 ### <ins>j17</ins>
 <b>Desc:   </b>Set Java17<br>
 <b>Usage:  </b>``j17``<br>
-<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-17.0.6
-set PATH=%JAVA_HOME%\bin;%PATH%``<br>
+<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-17.0.6 set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 ### <ins>j20</ins>
 <b>Desc:   </b>Set Java20<br>
 <b>Usage:  </b>``j20``<br>
-<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-20.0.1
-set PATH=%JAVA_HOME%\bin;%PATH%``<br>
+<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk-20.0.1 set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 ### <ins>j8</ins>
 <b>Desc:   </b>Set Java8<br>
 <b>Usage:  </b>``j8``<br>
-<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk1.8.0_202
-set PATH=%JAVA_HOME%\bin;%PATH%``<br>
+<b>Actual: </b>``set JAVA_HOME=C:\Apps\jdk1.8.0_202 set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 ### <ins>jv</ins>
 <b>Desc:   </b>Get Java version<br>
 <b>Usage:  </b>``jv``<br>
