@@ -300,10 +300,6 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Usage:  </b>``vr hvs.zENkM2BW1IENXB0Mg7NK``<br>
 <b>Actual: </b>``set VAULT_TOKEN=%s``<br>
 ### <ins>vs</ins>
-<b>Desc:   </b>Start Vault<br>
-<b>Usage:  </b>``vs vault-config.hcl``<br>
-<b>Actual: </b>``vault server -config vault-config.hcl``<br>
-### <ins>vs</ins>
 <b>Desc:   </b>Display the vault status<br>
 <b>Usage:  </b>``vs``<br>
 <b>Actual: </b>``vault status``<br>
@@ -315,6 +311,10 @@ set PATH=%JAVA_HOME%\bin;%PATH%``<br>
 <b>Desc:   </b>Create a secret in a vault<br>
 <b>Usage:  </b>``vse secret/ kv-v2``<br>
 <b>Actual: </b>``vault secrets enable -path=secret/ kv-v2``<br>
+### <ins>vser</ins>
+<b>Desc:   </b>Start Vault<br>
+<b>Usage:  </b>``vser vault-config.hcl``<br>
+<b>Actual: </b>``vault server -config vault-config.hcl``<br>
 ### <ins>vsl</ins>
 <b>Desc:   </b>List the secrets in a vault<br>
 <b>Usage:  </b>``vsl``<br>

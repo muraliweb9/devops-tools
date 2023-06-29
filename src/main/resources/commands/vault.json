@@ -5,9 +5,9 @@
     {
       "command": "vault server",
       "desc": "Start Vault",
-      "shortcut": "vs",
+      "shortcut": "vser",
       "code": "vault server -config %1",
-      "example": "vs vault-config.hcl"
+      "example": "vser vault-config.hcl"
     },
     {
       "command": "vault address",

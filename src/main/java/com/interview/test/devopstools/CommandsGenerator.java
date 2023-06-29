@@ -3,15 +3,18 @@ package com.interview.test.devopstools;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.interview.test.devopstools.pojo.CliCommand;
 import com.interview.test.devopstools.pojo.CliCommands;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.File;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
-import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class CommandsGenerator implements Runnable {
@@ -30,6 +33,8 @@ public class CommandsGenerator implements Runnable {
         List<File> commandsFiles = getCommandsFiles();
         List<CliCommands> cliCommands = getCiCommands(commandsFiles);
 
+        validate(cliCommands);
+
         List<ScriptsGenerator> scriptsGens =
                 Arrays.asList(new BatchScriptsGenerator(cliCommands), new BashScriptsGenerator(cliCommands));
 
@@ -37,6 +42,41 @@ public class CommandsGenerator implements Runnable {
 
         createReadMe(cliCommands);
         log.info("Finished generating DevOps commands");
+    }
+
+    @SneakyThrows
+    private void validate(List<CliCommands> cliCommands) {
+
+        Map<String, Long> byShortHand = cliCommands.stream().collect(
+                Collectors.groupingBy(CliCommands::getShorthand, Collectors.counting()));
+        byShortHand.entrySet().stream().forEach(e -> {
+            if (e.getValue() > 1) {
+                log.error("Command shorthand [{}] is defined in [{}] places", e.getKey(), e.getValue());
+                throw new RuntimeException(
+                        String.format("Command shorthand [%s] is defined in [%s] places", e.getKey(), e.getValue())
+                );
+            }
+        });
+
+        Optional<List<String>> shortCuts
+                = cliCommands.stream()
+                .map((c) -> c.getShortCuts())
+                .reduce((x, y) -> {
+                    x.addAll(y);
+                    return x;
+                });
+
+        Map<String, Long> byShortCut = shortCuts.get().stream().collect(
+                Collectors.groupingBy(s -> s, Collectors.counting()));
+
+        byShortCut.entrySet().stream().forEach(e -> {
+            if (e.getValue() > 1) {
+                log.error("Command shortcut [{}] is defined in [{}] places", e.getKey(), e.getValue());
+                throw new RuntimeException(
+                        String.format("Command shortcut [%s] is defined in [%s] places", e.getKey(), e.getValue())
+                );
+            }
+        });
     }
 
     @SneakyThrows
@@ -97,7 +137,10 @@ public class CommandsGenerator implements Runnable {
 
     @SneakyThrows
     private CliCommands loadCliCommands(File commandsFile) {
+        log.info("Loading command file [{}]", commandsFile.getName());
         ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(commandsFile, CliCommands.class);
+        CliCommands cliCommands = mapper.readValue(commandsFile, CliCommands.class);
+        log.info("Shorthand [{}] for command file [{}]", cliCommands.getShorthand(), commandsFile.getName());
+        return cliCommands;
     }
 }

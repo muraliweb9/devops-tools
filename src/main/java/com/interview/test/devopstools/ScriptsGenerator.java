@@ -2,14 +2,15 @@ package com.interview.test.devopstools;
 
 import com.interview.test.devopstools.pojo.CliCommand;
 import com.interview.test.devopstools.pojo.CliCommands;
-import java.io.File;
-import java.io.PrintWriter;
-import java.util.List;
 import lombok.SneakyThrows;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.springframework.util.FileSystemUtils;
+
+import java.io.File;
+import java.io.PrintWriter;
+import java.util.List;
 
 public interface ScriptsGenerator extends Runnable {
 
@@ -23,38 +24,39 @@ public interface ScriptsGenerator extends Runnable {
 
     List<CliCommands> getCliCommands();
 
-    default void validate() {}
+    default void validate() {
+    }
 
     @Override
     default void run() {
-        log.info("Generating {} commands ....", getName());
+        log.info("Generating [{}] commands ....", getName());
         validate();
         createFolderStructure();
         copyStaticScripts();
         writeDynamicScripts(getCliCommands());
-        log.info("Finished generating {} commands ....", getName());
+        log.info("Finished generating [{}] commands ....", getName());
     }
 
     default void createFolderStructure() {
-        log.info("Creating {} folder structure ....", getName());
+        log.info("Creating [{}] folder structure ....", getName());
         createFolderStructure(getOutputFolder());
-        log.info("Finished creating {} folder structure ....", getName());
+        log.info("Finished creating [{}] folder structure ....", getName());
     }
 
     private void createFolderStructure(String folderName) {
         File folder = new File("src/main/resources/" + folderName);
         boolean deleted = FileSystemUtils.deleteRecursively(folder);
         boolean created = folder.mkdir();
-        log.info("Folder {} was deleted {} and created {}", folder.getAbsoluteFile(), deleted, created);
+        log.info("Folder [{}] was deleted [{}] and created [{}]", folder.getAbsoluteFile(), deleted, created);
     }
 
     @SneakyThrows
     default void copyStaticScripts() {
-        log.info("Copying {} static scripts ....", getName());
+        log.info("Copying [{}] static scripts ....", getName());
         File src = new File("src/main/resources/" + getStaticFolder());
         File dest = new File("src/main/resources/" + getOutputFolder());
         FileUtils.copyDirectory(src, dest);
-        log.info("Finished copying {} static scripts ....", getName());
+        log.info("Finished copying [{}] static scripts ....", getName());
     }
 
     default void writeDynamicScripts(List<CliCommands> cliCommands) {
@@ -65,7 +67,7 @@ public interface ScriptsGenerator extends Runnable {
     private void writeDynamicScripts(CliCommands cliCommands) {
 
         log.info(
-                "Generating {} commands for {} with prefix {}",
+                "Generating [{}] commands for [{}] with prefix [{}]",
                 cliCommands.getCommands().size(),
                 cliCommands.getTool(),
                 cliCommands.getShorthand());
@@ -113,7 +115,7 @@ public interface ScriptsGenerator extends Runnable {
         String code = cliCommand.getCode();
         String example = cliCommand.getExample();
 
-        log.info("Writing batch for tool {} shorthand {} shortcut {}", tool, shortHand, shortcut);
+        log.info("Writing batch for tool [{}] shorthand [{}] shortcut [{}]", tool, shortHand, shortcut);
 
         if (shortcut != null) {
             File folder = new File("src/main/resources/" + getOutputFolder());
@@ -123,9 +125,9 @@ public interface ScriptsGenerator extends Runnable {
             PrintWriter writer = new PrintWriter(batchFile);
             writer.println(code);
             writer.close();
-            log.info("Wrote batch for tool {} shorthand {} shortcut {}", tool, shortHand, shortcut);
+            log.info("Wrote batch for tool [{}] shorthand [{}] shortcut [{}]", tool, shortHand, shortcut);
         } else {
-            log.info("Skipping batch for tool {} shorthand {} shortcut {}", tool, shortHand, shortcut);
+            log.info("Skipping batch for tool [{}] shorthand [{}] shortcut [{}]", tool, shortHand, shortcut);
         }
     }
 }

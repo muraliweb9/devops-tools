@@ -14,10 +14,10 @@ echo vpl  -^> vault policy list             -^> vpl                             
 echo vpr  -^> vault policy read %%1         -^> vpr admin-policy                        -^> Read a vault policy                               
 echo vpw  -^> vault policy write %%1 %%2    -^> vpw admin-policy admin-policy.hcl       -^> Write the policy to vault                         
 echo vr   -^> set VAULT_TOKEN=%%s           -^> vr hvs.zENkM2BW1IENXB0Mg7NK             -^> Set the vault root token                          
-echo vs   -^> vault server -config %%1      -^> vs vault-config.hcl                     -^> Start Vault                                       
 echo vs   -^> vault status                  -^> vs                                      -^> Display the vault status                          
 echo vsd  -^> vault secrets disable %%1     -^> vsd secret/                             -^> Disable a secret                                  
 echo vse  -^> vault secrets enable -path=%%1 %%2-^> vse secret/ kv-v2                       -^> Create a secret in a vault                        
+echo vser -^> vault server -config %%1      -^> vser vault-config.hcl                   -^> Start Vault                                       
 echo vsl  -^> vault secrets list            -^> vsl                                     -^> List the secrets in a vault                       
 echo vtc  -^> vault token create -policy=%%1-^> vtc admin-policy                        -^> Create a token in vault for a policy              
 echo vtl  -^> vault login %%1               -^> vtl RLkSejNEWPvHQ0hKBSsSSlql            -^> Login to Vault with a token                       
