@@ -14,7 +14,9 @@ public class CliCommand implements Comparable<CliCommand> {
     private String example;
 
     public String getCodeEscaped() {
-        return code.replace("%", "%%");
+        return code
+                .replace("%", "%%")
+                .replace("\n", " {AND} ");
     }
 
     public String getActual() {
