@@ -71,6 +71,34 @@
       "shortcut": null,
       "code": "curl http://localhost:8080",
       "example": "curl http://localhost:8080"
+    },
+    {
+      "command": "sudo def install java-1.8.0-amazon-corretto",
+      "desc": "Install Java 8 JRE",
+      "shortcut": null,
+      "code": "sudo def install java-1.8.0-amazon-corretto",
+      "example": "sudo def install java-1.8.0-amazon-corretto"
+    },
+    {
+      "command": "sudo def install java-1.8.0-amazon-corretto-devel",
+      "desc": "Install Java 8 JDK",
+      "shortcut": null,
+      "code": "sudo def install java-1.8.0-amazon-corretto-devel",
+      "example": "sudo def install java-1.8.0-amazon-corretto-devel"
+    },
+    {
+      "command": "puttygen golden-tick.ppk -O private-openssh -o golden-tick.pem",
+      "desc": "Convert PPK to PEM security key",
+      "shortcut": null,
+      "code": "puttygen golden-tick.ppk -O private-openssh -o golden-tick.pem",
+      "example": "puttygen golden-tick.ppk -O private-openssh -o golden-tick.pem"
+    },
+    {
+      "command": "ssh -i \"golden-tick.pem\" ec2-user@ec2-3-10-21-100.eu-west-2.compute.amazonaws.com",
+      "desc": "SSH into an EC2 instance",
+      "shortcut": null,
+      "code": "ssh -i \"golden-tick.pem\" ec2-user@ec2-3-10-21-100.eu-west-2.compute.amazonaws.com",
+      "example": "ssh -i \"golden-tick.pem\" ec2-user@ec2-3-10-21-100.eu-west-2.compute.amazonaws.com"
     }
   ]
 }

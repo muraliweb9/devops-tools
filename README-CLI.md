@@ -57,10 +57,26 @@
 <b>Desc:   </b>Find ports occupied<br>
 <b>Usage:  </b>``netstat -tulpn``<br>
 <b>Actual: </b>``netstat -tulpn``<br>
+### <ins>puttygen golden-tick.ppk -O private-openssh -o golden-tick.pem</ins>
+<b>Desc:   </b>Convert PPK to PEM security key<br>
+<b>Usage:  </b>``puttygen golden-tick.ppk -O private-openssh -o golden-tick.pem``<br>
+<b>Actual: </b>``puttygen golden-tick.ppk -O private-openssh -o golden-tick.pem``<br>
+### <ins>ssh -i "golden-tick.pem" ec2-user@ec2-3-10-21-100.eu-west-2.compute.amazonaws.com</ins>
+<b>Desc:   </b>SSH into an EC2 instance<br>
+<b>Usage:  </b>``ssh -i "golden-tick.pem" ec2-user@ec2-3-10-21-100.eu-west-2.compute.amazonaws.com``<br>
+<b>Actual: </b>``ssh -i "golden-tick.pem" ec2-user@ec2-3-10-21-100.eu-west-2.compute.amazonaws.com``<br>
 ### <ins>sudo -i</ins>
 <b>Desc:   </b>Become root user<br>
 <b>Usage:  </b>``sudo -i``<br>
 <b>Actual: </b>``sudo -i``<br>
+### <ins>sudo def install java-1.8.0-amazon-corretto</ins>
+<b>Desc:   </b>Install Java 8 JRE<br>
+<b>Usage:  </b>``sudo def install java-1.8.0-amazon-corretto``<br>
+<b>Actual: </b>``sudo def install java-1.8.0-amazon-corretto``<br>
+### <ins>sudo def install java-1.8.0-amazon-corretto-devel</ins>
+<b>Desc:   </b>Install Java 8 JDK<br>
+<b>Usage:  </b>``sudo def install java-1.8.0-amazon-corretto-devel``<br>
+<b>Actual: </b>``sudo def install java-1.8.0-amazon-corretto-devel``<br>
 ### <ins>sudo ss -lntp</ins>
 <b>Desc:   </b>Find ports occupied<br>
 <b>Usage:  </b>``sudo ss -lntp``<br>
